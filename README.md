@@ -1,2 +1,3 @@
-# financial-independence-planner
+# Financial Independence Planner
+
 Event-driven financial planning
