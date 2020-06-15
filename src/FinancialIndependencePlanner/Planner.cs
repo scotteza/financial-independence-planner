@@ -1,22 +1,32 @@
 ﻿using FinancialIndependencePlanner.IncomeStreams;
+using System.Collections.Generic;
 
 namespace FinancialIndependencePlanner
 {
     public class Planner
     {
+        private readonly Printer _printer;
+        private readonly List<IncomeStream> _incomeStreams;
+
         public Planner(Printer printer)
         {
-            throw new System.NotImplementedException();
+            _printer = printer;
+            _incomeStreams = new List<IncomeStream>();
         }
 
         public void AddIncomeStream(IncomeStream incomeStream)
         {
-            throw new System.NotImplementedException();
+            _incomeStreams.Add(incomeStream);
         }
 
         public void Plan(YearAndMonth startDate, YearAndMonth endDate)
         {
-            throw new System.NotImplementedException();
+            var range = new YearsAndMonthsForRangeFinder().GetYearsAndMonthsForRange(startDate, endDate);
+
+            foreach (var yearAndMonth in range)
+            {
+
+            }
         }
     }
 }
